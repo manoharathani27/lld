@@ -28,11 +28,11 @@ public:
                             string expiry) {
 
         cout << "Payment Done by Razorpay\n";
-        return "123";   // transaction ID as string
+        return "123";   
     }
 
     bool checkPaymentStatus(string id) {
-        return true;    // assume success
+        return true;   
     }
 };
 
@@ -47,14 +47,14 @@ public:
                   int expiryMonth,
                   int expiryYear) override {
 
-        // Convert int → string
+      
         string cvvStr = to_string(cvv);
         string expiry = to_string(expiryMonth) + "/" + to_string(expiryYear);
 
-        // Call adaptee method
+        
         string result = razorpayGateway.payByCreditCard(cardNumber, cvvStr, expiry);
 
-        // Convert string → long
+        
         return stol(result);
     }
 
