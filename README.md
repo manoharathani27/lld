@@ -1,2 +1,2 @@
 # lld
-this is about low level design projects
+this is about low level design patterns
